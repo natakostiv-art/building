@@ -201,6 +201,7 @@ a {
     padding-bottom: 120px;
 }
 
+
 .text {
     font-weight: 400;
     font-size: 16px;
@@ -220,14 +221,25 @@ a {
 
 .mb-heading {
     margin-bottom: 24px;
+
 }
 
-.cards {
-    display: grid;
-
-    grid-template-columns: repeat(6, 544px);
-    gap: 24px;
+.portfolio__viewport {
     overflow: hidden;
+
+}
+
+
+.cards {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 24px;
+    width: max-content;
+
+}
+
+.card: :nth-child(3n) {
+    margin-right: -24px;
 }
 
 .card {
@@ -235,6 +247,7 @@ a {
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+
 }
 
 .card__img {
@@ -259,7 +272,7 @@ a {
 }
 
 .card:hover .card__content {
-    background-color: #0c3d54;
+    background-color: #0C3D54;
 }
 
 .subtitle {
@@ -284,11 +297,12 @@ a {
 }
 
 .portfolio__slider {
-    display: flex;
-    gap: 24px;
+
+    width: 1680px;
+    position: relative;
     margin-top: 60px;
     margin-bottom: 40px;
-    position: relative;
+
 
 
 }
@@ -305,14 +319,15 @@ a {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 10;
 }
 
 .arrow:hover {
-    background-color: #0c3d54;
+    background-color: #0C3D54;
 }
 
 .arrow:active {
-    background-color: #041a24;
+    background-color: #041A24;
 }
 
 .arrow:disabled {
@@ -323,14 +338,11 @@ a {
 .arrow-left {
 
     left: -32px;
-
-
 }
 
 .arrow-right {
 
     right: -32px;
-
 }
 
 
@@ -341,6 +353,7 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .pagination__text {
@@ -580,14 +593,17 @@ a {
     line-height: 24px;
     letter-spacing: 0px;
     vertical-align: middle;
+    background-color: #0C3D54;
 }
+
+
 
 .start_input::placeholder {
     color: #999EAD;
 }
 
 .start_input:hover {
-    color: #0c3d54;
+    border: #0c3d54;
 }
 
 .start_input:focus {
@@ -632,10 +648,12 @@ a {
 
 .input_button:hover {
     background-color: #F7F8FA;
+    border: #052838;
 }
 
 .input_button:active {
     background-color: #F2F4F8;
+    border: #0c3d54;
 }
 
 .input_button:disabled {
@@ -671,9 +689,6 @@ a {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-
-
-
 
 }
 
@@ -722,7 +737,7 @@ a {
     align-items: flex-start;
     border-top: 1px solid #D7DAE2;
     padding-top: 100px;
-    max-width: 1200px;
+    max-width: 1680px;
     /* или то же значение, что у твоего .container */
     margin: 0 auto;
     padding-inline: 16px;
