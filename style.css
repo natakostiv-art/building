@@ -181,7 +181,7 @@ a {
 .about_content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 28px;
     min-width: 400px;
     max-width: 788px;
     align-self: stretch;
@@ -298,7 +298,7 @@ a {
 
 .portfolio__slider {
 
-    width: 1680px;
+    width: 100%;
     position: relative;
     margin-top: 60px;
     margin-bottom: 40px;
@@ -306,6 +306,14 @@ a {
 
 
 }
+
+.portfolio__frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* выравнивает стрелки по вертикали */
+}
+
 
 .arrow {
     position: absolute;
